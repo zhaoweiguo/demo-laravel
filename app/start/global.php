@@ -31,7 +31,9 @@ ClassLoader::addDirectories(array(
 |
 */
 
-Log::useFiles(storage_path().'/logs/laravel.log');
+// Log::useFiles(storage_path().'/logs/laravel.log');
+Log::useFiles('/data/demo/laravel/logs/laravel.log');
+//Log::useDailyFiles('/data/kaixin/ad/logs/'.$logFile);
 
 /*
 |--------------------------------------------------------------------------

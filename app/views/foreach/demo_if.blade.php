@@ -9,7 +9,15 @@
            <td> {{ $user['name'] }} </td>
            <td> {{ $user['mac'] }} </td>
            <td> {{ $user['imei'] }} </td>
-           <td> {{ $user['status'] }} </td>
+
+           <td>
+            @if ($user['status'] == 1)
+              可用
+            @else
+              停用
+            @endif
+           </td>
+
            <td> {{ $user['created_at'] }} </td>
            <td> {{ $user['updated_at'] }} </td>
         </tr>

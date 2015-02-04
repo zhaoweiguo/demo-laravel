@@ -13,24 +13,9 @@
 
 
 
-Route::get('foreach/demo1', function() {
-  $users = array();
+Route::get('foreach/demo1', 'ForeachController@demo1');
 
-  for($i=0; $i<10; $i++) {
-    $item = array();
-    $item['id'] = $i;
-    $item['name'] = "Name-$i";
-    $item['mac'] = 'mac';
-    $item['imei'] = 'imei';
-    $item['status'] = 'online';
-    $item['created_at'] = '';
-    $item['updated_at'] = '';
-    $users[] = $item;
-  }
-
-
-  return View::make('foreach.demo1')->with('users', $users);
-});
+Route::get('foreach/demo_if', 'ForeachController@demo_if');
 
 
 
